@@ -3,7 +3,17 @@
 %em #{@asdf}
 <hr/>
 - @users.each do |user|
-  %div
+  %div.user
     %p #{user.first_name} #{user.last_name}
+    =form_tag users_path, method: :post, class: "user" do
+      %ul
+      -user.errors.full_messages.each do |error|
+        %li= error
+
+      =label_tag :name, "Name: ", class: "field_tag"
+      =text_field_tag :name, "", class: "field"
+
+      =submit_tag "Submit", class: "submit"
+      
   <hr/>
-  
+

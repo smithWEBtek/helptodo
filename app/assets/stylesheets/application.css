@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+.user {
+  background-color: rgb(67, 94, 50);
+  border: 2px solid darkgreen;
+  border-radius: 12px;
+  color: white;
+  padding: 10px;
+  width: 50%;
+}
+
